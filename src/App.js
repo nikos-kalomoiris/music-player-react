@@ -32,6 +32,7 @@ function App() {
   }
 
   return (
+    
     <div className="App" >
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
       <Song currSong={ currSong }/>
