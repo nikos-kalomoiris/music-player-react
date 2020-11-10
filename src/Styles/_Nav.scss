@@ -1,0 +1,24 @@
+nav {
+  min-height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  button {
+    background: none;
+    border: solid 2px rgb(92, 92, 92);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgb(92, 92, 92);
+      color: white;
+    }
+
+    .music-note {
+      margin-left: 0.3rem;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: rgb(44, 44, 44);
+}
+
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  color: rgb(100, 100, 100);
+}
+
+@import "./Song";
+@import "./Player";
+@import "./Library";
+@import "./Nav";
