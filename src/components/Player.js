@@ -3,7 +3,7 @@ import React from 'react';
 import PlayControls from './PlayControls'
 import TimeControls from './TimeControls'
 
-const Player = ({ timeUpdateHandler, isPlaying, setIsPlaying, songInfo, setSongInfo, audioRef}) => {
+const Player = ({ currSong, isPlaying, setIsPlaying, songInfo, setSongInfo, audioRef, songs, setCurrSong, setSongs}) => {
 
     //Event Handlers
     const playSongHandler = () => {
@@ -33,10 +33,17 @@ const Player = ({ timeUpdateHandler, isPlaying, setIsPlaying, songInfo, setSongI
     return (
     <div className="player">
         <div className="time-control">
-            <TimeControls songInfo={songInfo} getTime={getTime} dragHandler={dragHandler}/>
+            <TimeControls songInfo={songInfo} getTime={getTime} dragHandler={dragHandler} currSong={currSong}/>
         </div>
         <div className="play-control">
-            <PlayControls playSong={playSongHandler} isPlaying={isPlaying}/>
+            <PlayControls 
+                playSong={playSongHandler} 
+                isPlaying={isPlaying} 
+                songs={songs} 
+                currSong={currSong} 
+                setCurrSong={setCurrSong} 
+                setSongs={setSongs}
+                audioRef={audioRef}/>
         </div>
     </div>
     );

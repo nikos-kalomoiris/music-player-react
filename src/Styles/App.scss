@@ -17,6 +17,14 @@ h4 {
   color: rgb(100, 100, 100);
 }
 
+.app {
+  position: relative;
+  transition: all 0.5s ease;
+}
+.library-pressed {
+  margin-left: 20%;
+}
+
 @import "./Song";
 @import "./Player";
 @import "./Library";

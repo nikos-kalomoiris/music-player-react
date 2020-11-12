@@ -10,6 +10,7 @@ nav {
     border: solid 2px rgb(92, 92, 92);
     cursor: pointer;
     padding: 0.5rem;
+    z-index: 999;
     transition: all 0.3s ease;
 
     &:hover {
@@ -20,5 +21,10 @@ nav {
     .music-note {
       margin-left: 0.3rem;
     }
+  }
+
+  h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.7rem;
   }
 }
