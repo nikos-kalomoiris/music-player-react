@@ -2,6 +2,8 @@ import React from 'react';
 
 import PlayControls from './PlayControls'
 import TimeControls from './TimeControls'
+import {FontAwesomeIcon as Icon} from '@fortawesome/react-fontawesome'
+import { faVolumeUp } from '@fortawesome/free-solid-svg-icons'
 
 const Player = ({ currSong, isPlaying, setIsPlaying, songInfo, setSongInfo, audioRef, songs, setCurrSong, setSongs}) => {
 
@@ -32,6 +34,7 @@ const Player = ({ currSong, isPlaying, setIsPlaying, songInfo, setSongInfo, audi
 
     return (
     <div className="player">
+        
         <div className="time-control">
             <TimeControls songInfo={songInfo} getTime={getTime} dragHandler={dragHandler} currSong={currSong}/>
         </div>

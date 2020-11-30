@@ -1,0 +1,9 @@
+.play-control {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+
+  svg {
+    cursor: pointer;
+  }
+}

@@ -5,6 +5,39 @@
   font-family: "Poppins", sans-serif;
 }
 
+.dark-theme {
+  * {
+    color: #e0e0e0;
+  }
+  .player,
+  .song-container,
+  .library {
+    background-color: #545454;
+  }
+
+  .library {
+    box-shadow: 1rem 1rem 3rem #383838;
+    .library-song {
+      &:hover {
+        background-color: rgb(127, 29, 167);
+      }
+    }
+    .selected {
+      background-color: rgb(145, 79, 145);
+    }
+  }
+
+  .animate-track {
+    background: rgba(63, 63, 63, 0.7);
+  }
+
+  nav {
+    background-color: #3d3d3d;
+  }
+
+  transition: all 0.5s ease;
+}
+
 h1,
 h2,
 h3 {
@@ -29,3 +62,5 @@ h4 {
 @import "./Player";
 @import "./Library";
 @import "./Nav";
+@import "./PlayControls";
+@import "./ToggleButton";

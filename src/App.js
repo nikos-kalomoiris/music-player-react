@@ -14,6 +14,7 @@ function App() {
   const [currSong, setCurrSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [libraryStatus, setLibraryStatus] = useState(false);
+  const [toggled, setToggled] = useState(false);
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
     duration: 0,
@@ -43,9 +44,13 @@ function App() {
     audioRef.current.play();
   }
 
+  const handleToggle = () => {
+    setToggled(prev => !prev);
+  }
+
   return (
-    <div className={`app ${libraryStatus ? 'library-pressed': ''}`} >
-      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
+    <div className={`app ${libraryStatus ? 'library-pressed': ''} ${toggled ? 'dark-theme': ''}` } >
+      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} toggled={toggled} click={handleToggle}/>
       <Song currSong={ currSong }/>
       <Player 
         currSong={ currSong } 
